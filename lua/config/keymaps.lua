@@ -17,7 +17,9 @@ local firstUseNvimTree = true
 local function firstUseNvimTreeFunc()
   if firstUseNvimTree then
     require("nvim-tree").setup {
-      view = { width = 20 }
+      view = { width = 20 },
+      renderer = { indent_width = 1 },
+      diagnostics = { enable = true }
     }
     firstUseNvimTree = false
   end
